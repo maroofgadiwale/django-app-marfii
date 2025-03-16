@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Input</title>
+</head>
+<body>
+    <table border = "1px">
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Marks</th>
+        {% for student in details %}
+        <tr>
+            <td>{{student.roll}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.marks}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
