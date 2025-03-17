@@ -72,8 +72,12 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 # Databases:
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get("DATABASE_URL"))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'myapp_student', 
+    }
 }
+
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
